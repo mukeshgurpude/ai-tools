@@ -33,9 +33,9 @@ export default function Dashboard() {
     return (
         <div className='dashboard'>
             <h1>API Tools</h1>
-            <h3>Try useful APIs</h3>
+            <h3>Try AI Based Tools</h3>
             <div className="tools">
-                {tools.map((tool, index) => { return <Toolcard key={index} text={tool.text} description={tool.description} icon={tool.icon} link={tool.link} available={tool.available} /> })}
+                {tools.map((tool) => { return <Toolcard key={tool.text} {...tool} /> })}
             </div>
         </div>
     )
