@@ -1,0 +1,20 @@
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap;
+  &>:nth-child(1) {
+    width: 50%;
+    & textarea {
+      min-width: 500px;
+      min-height: 60px;
+    }
+  }
+  &>:nth-child(2) {
+    width: 30%;
+    & textarea {
+      min-width: 300px;
+    }
+  }
+}
