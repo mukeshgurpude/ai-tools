@@ -18,3 +18,19 @@ section {
     }
   }
 }
+div.output {
+  margin-top: 1em;
+  padding: .3em;
+  & p:first-child {
+    font-size: .8em;
+    margin-bottom: 0;
+  }
+  & p:last-child {
+    font-size: 1.2em;
+    margin-top: 0;
+    font-weight: bold;
+  }
+  &[data-empty=true] {
+    display: none;
+  }
+}

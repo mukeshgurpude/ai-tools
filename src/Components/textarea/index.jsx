@@ -19,7 +19,7 @@ export default function TextInput({ name, label='', value='', rows=4, fullWidth=
       <p className='helper-text'>{(value.length >= max_length) ? 'Text limit reached' : ''}</p>
       <div className='text-input-counter'>{value.length}/{max_length}</div>
     </div>
-    { (value.length == 0) ?
+    { (value.length === 0) ?
       <div className='overlay'>
         <button onClick={async () => {
           const text = await navigator.clipboard.readText()
