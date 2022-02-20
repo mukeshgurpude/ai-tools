@@ -1,13 +1,11 @@
 import './style.scss'
+import List from '../List'
 
 export default function Sidebar() {
+    const items = ['ParaQuestions', 'Summarizer', 'Sentiment Analyzer', 'Object Detector']
     return <div className="pages">
         <ul>
-            <li className="page">Extractive Q/A</li>
-            <li className="page">Summarizer</li>
-            <li className="page">Coming Soon</li>
-            <li className="page">Coming Soon</li>
-            <li className="page">Coming Soon</li>
+            {items.map((item, index) => <List key={index} text={item} />)}
         </ul>
     </div>
 }
