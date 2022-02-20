@@ -1,0 +1,52 @@
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1em 0;
+  width: min-content;
+  min-width: max-content;
+  height: min-content;
+  margin: 0 auto;
+  &.fullWidth{width: 100%;}
+  h4 {margin: 0; text-align: left;}
+  textarea {
+    width: 100%;
+    min-width: 250px;
+    padding: .2em;
+    margin: 0;
+    border-color: #999;
+    height: fit-content;
+  }
+  .text-input-counter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8em;
+    color: #999;
+  }
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    font-size: .8em;
+    margin: 0;
+    &:empty {display: none;}
+  }
+  &:focus-within {
+    outline: none;
+  }
+  & .overlay {
+    left: 50%;
+    position: absolute;
+    top: calc(50% + .5em);
+    transform: translate(-50%, -50%);
+    button {
+      background: none;
+      border: 1px solid #999;
+      cursor: pointer;
+      padding: 0.2em;
+      &:hover { color: rgb(15, 75, 15);}
+    }
+  }
+}
