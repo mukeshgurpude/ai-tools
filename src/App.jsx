@@ -1,11 +1,15 @@
 import './App.scss';
 import Sidebar from './Components/Sidebar';
+import Dashboard from './Components/Dashboard';
+
 
 function App() {
-  return <div className="App">
-    <h1>AI Tools</h1>
-    <Sidebar />
-  </div>;
+  return (
+    <div className="App">
+      < Dashboard />
+      {/* < Sidebar /> */}
+    </div>
+  );
 }
 
 export default App;
