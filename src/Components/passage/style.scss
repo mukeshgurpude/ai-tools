@@ -1,3 +1,18 @@
+button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #eee;
+  }
+}
+
 section {
   width: 100%;
   display: flex;
@@ -33,4 +48,9 @@ div.output {
   &[data-empty=true] {
     display: none;
   }
+}
+
+.overlay {
+  display: flex;
+  gap: .5em;
 }

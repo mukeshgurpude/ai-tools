@@ -11,3 +11,11 @@ export async function get_answer(context, question) {
     body: JSON.stringify({context, question})
   }).then(res => res.json())
 }
+
+export function wake_up_model() {
+  fetch(base_url, {
+    headers: {
+      'x-api-key': process.env.REACT_APP_API_KEY
+    }
+  })
+}

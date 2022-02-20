@@ -4,7 +4,7 @@ export default function TextInput({ name, label='', value='', rows=4, fullWidth=
   function onChange(event) {
     event.preventDefault()
     const new_value = event.target.value
-    if (new_value.length <= max_length) props.onchange(new_value)
+    props.onchange(new_value.substring(0, max_length))
   }
 
   return <div className={'input-wrapper' + (fullWidth?' fullwidth':'')}>
@@ -28,6 +28,12 @@ export default function TextInput({ name, label='', value='', rows=4, fullWidth=
           <span className="material-icons">content_paste</span>
           <span>Paste Text</span>
         </button>
+        {
+          props.sample_text && 
+          <button onClick={() => {
+            props.onchange(props.sample_text.substring(0, max_length))
+          }}>Use Sample</button>
+        }
       </div>
       :
       null
