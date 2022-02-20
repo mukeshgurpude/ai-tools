@@ -1,0 +1,35 @@
+.pages {
+  background: #FAFBFD;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+
+  ul {
+    list-style-type: none;
+    margin-top: 50px;
+    padding: 0;
+    font-family: Noto Sans JP;
+    font-weight: 500;
+    font-size: 20px;
+    color: #726f6f;
+
+    ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      transition: all 100ms ease-in-out;
+
+      &:hover {
+        background-color: #9e9e9e;
+        color: #090f31;
+      }
+    }
+  }
+}
+
