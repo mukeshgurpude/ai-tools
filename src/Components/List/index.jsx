@@ -1,7 +1,13 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-export default function List( {text} ) {
+export default function List( {text, available, link='#'} ) {
   return (
-    <li>{text}</li>
+    <li>
+      {available?
+        <NavLink to={link} children={text} />
+        :
+        text
+      }</li>
   )
 }
