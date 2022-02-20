@@ -1,11 +1,12 @@
 import './style.scss'
 import List from '../List'
+import { tools } from '../Dashboard'
 
 export default function Sidebar() {
-    const items = ['ParaQuestions', 'Summarizer', 'Sentiment Analyzer', 'Object Detector']
     return <div className="pages">
         <ul>
-            {items.map((item, index) => <List key={index} text={item} />)}
+            <List text='Home' link='/' available={true}/>
+            {tools.map((item, index) => <List {...item} key={index} />)}
         </ul>
     </div>
 }
