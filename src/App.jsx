@@ -12,7 +12,6 @@ function App() {
       <Sidebar />
       <Wrapper>
       <Routes>
-        {/* <Route path="/" element={<Sidebar />}/> */}
         <Route path="/" element={<DashBoard />} />
         <Route path="/passage" element={<PassageAnswers />} />
         <Route path="*" element={<div>404</div>} />
